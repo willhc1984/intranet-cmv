@@ -29,6 +29,22 @@ public class UserModel implements Serializable, UserDetails {
 	@Column(nullable = false)
 	private String password;
 	
+	public UUID getUserId() {
+		return userId;
+	}
+	public void setUserId(UUID userId) {
+		this.userId = userId;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return null;
@@ -43,19 +59,21 @@ public class UserModel implements Serializable, UserDetails {
 	}
 	@Override
 	public boolean isAccountNonExpired() {
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isAccountNonLocked() {
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isCredentialsNonExpired() {
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isEnabled() {
-		return false;
+		return true;
 	}
+	
+	
 
 }
