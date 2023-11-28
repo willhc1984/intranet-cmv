@@ -16,7 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 @Entity
-@Table(name = "TB_USER")
+@Table(name = "tb_user")
 public class UserModel implements Serializable, UserDetails {
 	
 	private static final long serialVersionUID = 1L;
