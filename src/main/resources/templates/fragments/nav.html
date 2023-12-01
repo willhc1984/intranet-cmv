@@ -1,0 +1,44 @@
+<div th:fragment="navElement" th:remove="tag">
+	<header class="header text-center">	    
+	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Intranet :: CMV</a></h1>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
+				<div class="profile-section pt-3 pt-lg-0">
+				    <img class="profile-image mb-3 rounded-circle mx-auto" th:src="@{/images/logo-cmv.png}" alt="image" >			
+					
+					<div class="bio mb-3">Bem vindo a Intranet Camara Municipal de Votorantim!<br></div><!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
+			        </ul><!--//social-list-->
+			        <hr> 
+				</div><!--//profile-section-->
+				
+				<ul class="navbar-nav flex-column text-start">
+					<li class="nav-item">
+					    <a class="nav-link" th:href="@{/}"><i class="fas fa-home fa-fw me-2"></i>Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" th:href="@{/add-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Criar Post</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
+					</li>				
+				</ul>
+			</div>
+		</nav>
+    </header>
+</div>

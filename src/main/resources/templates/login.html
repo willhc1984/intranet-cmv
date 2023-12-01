@@ -1,1 +1,53 @@
-teste
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+    <div th:replace="fragments/head"></div>
+</head> 
+
+<body>
+    
+    <div th:replace="fragments/nav"></div>
+    
+    <div class="main-wrapper">
+	    
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center single-col-max-width">
+			    <h2 class="heading">Intranet Camara Municipal de Votorantim</h2>
+			    <div class="single-form-max-width pt-3 mx-auto">
+				    <form method="post" th:action="@{/login}" style="width: 100%; max-width: 330px; margin: auto;">
+						<img class="mb-4" th:src="@{/images/logo-cmv.png}" alt="" width="72" height="57">
+						<h1 class="h3 mb-3 fw-normal">Faça o login</h1>
+						
+						<div th:if="${alerta != null}" th:class="${alerta == 'erro'} ? 'alert alert-danger' : 'alert alert-success'"
+							 role="alert">
+						  <h4 th:text="${titulo}" class="alert-heading">Credenciais...</h4>
+						  <p th:text="${texto}">Login ou senha incorretos...</p>
+						  <hr>
+						  <p class="mb-0"><small th:text="${subtexto}">Acesso permitido...</small></p>
+						</div>
+					
+						<div class="form-floating">
+						  <input type="text" class="form-control mb-3" name="username" id="floatingInput" placeholder="name@example.com">
+						  <label for="floatingInput">Login</label>
+						</div>
+						<div class="form-floating">
+						  <input type="password" class="form-control mb-3" name="password" id="floatingPassword" placeholder="Password">
+						  <label for="floatingPassword">Senha</label>
+						</div>
+						
+						<button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+						
+					</form>
+			    </div><!--//single-form-max-width-->
+		    </div><!--//container-->
+	    </section>
+	    
+	    <div th:replace="fragments/footer"></div>
+    
+    </div><!--//main-wrapper-->
+
+</body>
+</html> 
+

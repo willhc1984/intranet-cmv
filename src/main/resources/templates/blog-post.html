@@ -1,0 +1,36 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+	
+<head>
+    <div th:replace="fragments/head"></div>
+</head> 
+
+<body>
+    
+    <div th:replace="fragments/nav"></div>
+    
+    <div class="main-wrapper">
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">Postagem de exemplo</h2>
+				    <div class="meta mb-3"><span class="date">Publicado em 01/01/2024</span></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+				        <a href=""><img class="img-fluid" th:src="@{/images/logo-cmv.png}" alt="image"></a>
+				    </figure>
+				    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+				   
+			    </div>				    
+		    </div><!--//container-->
+	    </article>
+	    
+	   <div th:replace="fragments/footer"></div>
+   </div>
+
+</body>
+</html> 
+
