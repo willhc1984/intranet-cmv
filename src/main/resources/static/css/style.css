@@ -1,0 +1,9 @@
+.menu-user {   
+    border-bottom: 2px solid #FFF;
+    font-size: 15pt;
+    color: #FFF;
+    position:fixed;
+    top:0;
+    right:0px;
+    padding: 9px;
+}

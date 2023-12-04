@@ -1,7 +1,21 @@
 <div th:fragment="navElement" th:remove="tag">
-	<header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="index.html">Intranet :: CMV</a></h1>
-        
+	<header class="header text-center">	 
+		
+		<form th:action="@{/logout}" sec:authorize="isAuthenticated()" 
+					  method="post"  class="form-inline mt-2 mt-md-0 menu-user">
+			<div class="btn-group mb-2 mr-sm-2">
+				<div class="btn-group">
+				  <button class="btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  	<i class="fas fa-user"></i> 
+							<span class="" sec:authentication="name">Bob</span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><button type="submit" class="dropdown-item">Sair</button></li>
+				  </ul>
+				</div>
+			</div>
+		</form>
+  		
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +43,7 @@
 					    <a class="nav-link" th:href="@{/add-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Criar Post</a>
 					</li>
 					<li class="nav-item">
-					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
+					    <a class="nav-link" th:href="@{/blog-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
 					</li>
 					<li class="nav-item">
 					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
