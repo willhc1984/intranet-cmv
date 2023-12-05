@@ -27,7 +27,7 @@ public class UserModel implements Serializable, UserDetails {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
 	@Column(nullable = false, unique = true)
 	private String username;

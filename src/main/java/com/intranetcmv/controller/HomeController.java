@@ -27,14 +27,4 @@ public class HomeController {
 		return "login";
 	}
 	
-	@GetMapping("/blog-post")
-	public String blogPost(){
-		return "blog-post";
-	}
-	
-	@GetMapping("/add-post")
-	public String criarPost(){
-		return "criar-post";
-	}
-	
 }
