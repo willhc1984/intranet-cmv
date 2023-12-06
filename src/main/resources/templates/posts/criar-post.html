@@ -10,9 +10,36 @@
     
     <div th:replace="fragments/nav"></div>
     
-    <div class="main-wrapper">
+    <div class="main-wrapper" style="z-index: 0;">
 	    <article class="blog-post px-3 py-5 p-md-5">
-		    <h1>Criar...</h1>
+		    <form th:action="@{/posts/salvar}" th:object="${postModel}" method="POST">							
+				<div class="mb-3">
+					<label for="titulo">Titulo</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="nome" placeholder="titulo da postagem" 
+								name="titulo" />
+						<div class="invalid-feedback">Titulo obrigatório.</div>
+					</div>
+				</div>
+				
+				<div class="mb-3">
+					<label for="corpo">Texto</label> 
+					<input type="text" class="form-control" id="texto" name="corpo"	placeholder="texto da postagem..."  required />
+					<div class="invalid-feedback">Texto obrigatório.</div>
+				</div>	
+				
+				<div class="mb-3">
+					<label for="imagem">Imagem</label> 
+					<input type="text" class="form-control" id="texto" name="imagem" placeholder="texto da postagem..."  required />
+					<div class="invalid-feedback">Texto obrigatório.</div>
+				</div>						
+				
+				<button type="submit" class="btn btn-primary"
+						data-toggle="tooltip" data-placement="right" title="Salvar">
+						<i class="fas fa-save">Salvar</i>
+									
+			</form>
+			
 	    </article>
 	    
 	   <div th:replace="fragments/footer"></div>

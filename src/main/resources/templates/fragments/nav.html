@@ -2,8 +2,8 @@
 	<header class="header text-center">	 
 		
 		<form th:action="@{/logout}" sec:authorize="isAuthenticated()" 
-					  method="post"  class="form-inline mt-2 mt-md-0 menu-user">
-			<div class="btn-group mb-2 mr-sm-2">
+					  method="post"  class="form-inline mt-2 mt-md-0">
+			<div class="btn-group mb-2 mr-sm-2 menu-user">
 				<div class="btn-group">
 				  <button class="btn btn-warning btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 				  	<i class="fas fa-user"></i> 
@@ -40,10 +40,10 @@
 					    <a class="nav-link" th:href="@{/}"><i class="fas fa-home fa-fw me-2"></i>Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-					    <a class="nav-link" th:href="@{/add-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Criar Post</a>
+					    <a class="nav-link" th:href="@{/posts/add-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Criar Post</a>
 					</li>
 					<li class="nav-item">
-					    <a class="nav-link" th:href="@{/blog-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
+					    <a class="nav-link" th:href="@{/posts/blog-post}"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
 					</li>
 					<li class="nav-item">
 					    <a class="nav-link" href="#"><i class="fas fa-bookmark fa-fw me-2"></i>Link</a>
